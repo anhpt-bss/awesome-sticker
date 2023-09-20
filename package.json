@@ -1,0 +1,72 @@
+{
+  "name": "awesome-sticker",
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/App.js",
+  "module": "dist/App.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhpt-bss/awesome-sticker.git"
+  },
+  "keywords": [
+    "awesome",
+    "sticker",
+    "reaction"
+  ],
+  "author": "AnhPT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anhpt-bss/awesome-sticker/issues"
+  },
+  "homepage": "https://github.com/anhpt-bss/awesome-sticker#readme",
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+    "publish:npm": "(if exist dist rmdir /s /q dist) && mkdir dist && babel .App.js -d dist --copy-files"
+  },
+  "dependencies": {
+    "@ladifire-opensource/stylex": "^0.1.0-beta.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/preset-react": "^7.22.15",
+    "@craco/craco": "^7.1.0",
+    "@ladifire-opensource/babel-plugin-transform-stylex": "^0.1.0-beta.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  }
+}
