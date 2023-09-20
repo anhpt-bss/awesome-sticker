@@ -3,26 +3,28 @@
   "version": "1.0.3",
   "private": false,
   "description": "A awesome sticker for chat application",
+  "author": "AnhPT",
+  "license": "MIT",
+  "keywords": [
+    "awesome",
+    "sticker",
+    "reaction",
+    "chat",
+    "popover"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhpt-bss/awesome-sticker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anhpt-bss/awesome-sticker/issues"
+  },
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
     "dist",
     "README.md"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anhpt-bss/awesome-sticker.git"
-  },
-  "keywords": [
-    "awesome",
-    "sticker",
-    "reaction"
-  ],
-  "author": "AnhPT",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/anhpt-bss/awesome-sticker/issues"
-  },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
@@ -40,6 +42,17 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/preset-react": "^7.22.15",
+    "@craco/craco": "^7.1.0",
+    "@ladifire-opensource/babel-plugin-transform-stylex": "^0.1.0-beta.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -56,17 +69,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.22.15",
-    "@babel/preset-react": "^7.22.15",
-    "@craco/craco": "^7.1.0",
-    "@ladifire-opensource/babel-plugin-transform-stylex": "^0.1.0-beta.0"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
     ]
   }
 }
