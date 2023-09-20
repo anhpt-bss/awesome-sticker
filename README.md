@@ -1,17 +1,5 @@
 <h1 align="center">Awesome Sticker</h1>
 
-<div align="center">
-
-A awesome sticker for chat application.
-
-[![CI status][github-action-image]][github-action-url] [![codecov][codecov-image]][codecov-url] [![NPM version][npm-image]][npm-url] [![NPM downloads][download-image]][download-url]
-
-[![][bundlephobia-image]][bundlephobia-url] [![][bundlesize-js-image]][unpkg-js-url] [![FOSSA Status][fossa-image]][fossa-url] [![Covered by Argos Visual Testing][argos-ci-image]][argos-ci-url]
-
-[![Follow Twitter][twitter-image]][twitter-url] [![Renovate status][renovate-image]][renovate-dashboard-url] [![][issues-helper-image]][issues-helper-url] [![dumi][dumi-image]][dumi-url] [![Issues need help][help-wanted-image]][help-wanted-url]
-
-</div>
-
 ## ✨ Features
 
 - 🌈 Enterprise-class UI designed for web applications.
@@ -49,11 +37,11 @@ pnpm add awesome-sticker
 
 ```jsx
 import React from 'react';
-import App from 'awesome-sticker';
+import { AwesomeSticker } from 'awesome-sticker';
 
 const App = () => (
   <>
-    <App />
+    <AwesomeSticker />
   </>
 );
 ```
