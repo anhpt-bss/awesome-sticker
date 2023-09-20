@@ -1,0 +1,165 @@
+import { zalo_quby_1, zalo_quby_2, zalo_quby_3, zalo_quby_4, zalo_quby_5, zalo_quby_6, zalo_quby_7, zalo_quby_8, zalo_quby_9, zalo_quby_10, zalo_quby_11, zalo_quby_12, zalo_quby_13, zalo_quby_14, zalo_quby_15, zalo_quby_16, zalo_quby_17, zalo_quby_18, zalo_quby_19, zalo_quby_20, zalo_quby_21, zalo_quby_22, zalo_quby_23, zalo_quby_24, zalo_quby_25, zalo_quby_26, zalo_quby_27 } from "containers/assets";
+export const zaloQuby = [{
+  frameCount: 19,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 19,
+  spriteImg: zalo_quby_1
+}, {
+  frameCount: 14,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 14,
+  spriteImg: zalo_quby_2
+}, {
+  frameCount: 10,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 10,
+  spriteImg: zalo_quby_3
+}, {
+  frameCount: 20,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 20,
+  spriteImg: zalo_quby_4
+}, {
+  frameCount: 5,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 5,
+  spriteImg: zalo_quby_5
+}, {
+  frameCount: 4,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 4,
+  spriteImg: zalo_quby_6
+}, {
+  frameCount: 16,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 16,
+  spriteImg: zalo_quby_7
+}, {
+  frameCount: 10,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 10,
+  spriteImg: zalo_quby_8
+}, {
+  frameCount: 8,
+  frameRate: 190,
+  framesPerCol: 1,
+  framesPerRow: 8,
+  spriteImg: zalo_quby_9
+}, {
+  frameCount: 11,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 11,
+  spriteImg: zalo_quby_10
+}, {
+  frameCount: 12,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 12,
+  spriteImg: zalo_quby_11
+}, {
+  frameCount: 12,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 12,
+  spriteImg: zalo_quby_12
+}, {
+  frameCount: 20,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 20,
+  spriteImg: zalo_quby_13
+}, {
+  frameCount: 10,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 10,
+  spriteImg: zalo_quby_14
+}, {
+  frameCount: 8,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 8,
+  spriteImg: zalo_quby_15
+}, {
+  frameCount: 12,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 12,
+  spriteImg: zalo_quby_16
+}, {
+  frameCount: 19,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 19,
+  spriteImg: zalo_quby_17
+}, {
+  frameCount: 12,
+  frameRate: 190,
+  framesPerCol: 1,
+  framesPerRow: 12,
+  spriteImg: zalo_quby_18
+}, {
+  frameCount: 2,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 2,
+  spriteImg: zalo_quby_19
+}, {
+  frameCount: 12,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 12,
+  spriteImg: zalo_quby_20
+}, {
+  frameCount: 12,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 12,
+  spriteImg: zalo_quby_21
+}, {
+  frameCount: 7,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 7,
+  spriteImg: zalo_quby_22
+}, {
+  frameCount: 15,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 15,
+  spriteImg: zalo_quby_23
+}, {
+  frameCount: 19,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 19,
+  spriteImg: zalo_quby_24
+}, {
+  frameCount: 6,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 6,
+  spriteImg: zalo_quby_25
+}, {
+  frameCount: 12,
+  frameRate: 90,
+  framesPerCol: 1,
+  framesPerRow: 12,
+  spriteImg: zalo_quby_26
+}, {
+  frameCount: 16,
+  frameRate: 190,
+  framesPerCol: 1,
+  framesPerRow: 16,
+  spriteImg: zalo_quby_27
+}];
+export const zaloSticker = [...zaloQuby];

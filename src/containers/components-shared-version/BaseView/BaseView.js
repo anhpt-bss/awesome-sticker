@@ -1,0 +1,75 @@
+/**
+ * Copyright (c) AnhPT, IT. And its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+import * as React from "react";
+
+import stylex from '@ladifire-opensource/stylex';
+
+// NOTE: not available for shared version, only can use in internal of Ladifire
+// import {LegacyHidden} from "./LegacyHidden";
+
+
+const styles = stylex.create({
+  root: {
+    boxSizing: "border-box",
+    position: "relative",
+    zIndex: 0
+  },
+  hidden: {
+    display: "none"
+  },
+});
+
+// interface Props {
+//   children?: any;
+//   suppressHydrationWarning?: boolean;
+//   testid?: string;
+//   xstyle?: any;
+//   hidden?: boolean;
+// }
+
+const BaseView = (props, ref) => {
+  const {
+    children,
+    suppressHydrationWarning,
+    testid,
+    xstyle,
+    hidden,
+    ...otherProps
+  } = props;
+
+  const _isHidden = hidden === true;
+
+  // This is not available for shared version, because we use React 17.x version
+  // (must use custom build of React for using LegacyHidden)
+  // return (
+  //   <LegacyHidden
+  //     htmlAttributes={Object.assign({}, otherProps, {
+  //       className: stylex(styles.root, xstyle, _isHidden && styles.hidden)
+  //     })}
+  //     mode={_isHidden ? "hidden" : "visible"}
+  //     ref={ref}
+  //     suppressHydrationWarning={suppressHydrationWarning}
+  //   >
+  //     {children}
+  //   </LegacyHidden>
+  // );
+
+  // This is for shared version
+  return (
+    <div
+      className={stylex(styles.root, xstyle)}
+      ref={ref}
+      {...otherProps}
+    >
+      {children}
+    </div>
+  );
+};
+
+const _BaseView = React.forwardRef(BaseView);
+export {_BaseView as BaseView}

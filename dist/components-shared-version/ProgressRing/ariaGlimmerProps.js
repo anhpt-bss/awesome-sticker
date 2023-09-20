@@ -5,16 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from "react";
-
-import { AwesomeSticker } from "./containers";
-
-import "./index.css";
-
-const App = () => {
-  return (
-    <AwesomeSticker />
-  );
+export const ariaGlimmerProps = {
+  "aria-busy": true,
+  "aria-valuemax": 100,
+  "aria-valuemin": 0,
+  "aria-valuetext": "Loading...",
+  role: "progressbar",
+  tabIndex: 0
 };
-
-export default App;
