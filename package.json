@@ -1,6 +1,6 @@
 {
   "name": "awesome-sticker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "description": "A awesome sticker for chat application",
   "author": "AnhPT",
@@ -30,7 +30,8 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "publish:npm": "(if exist dist rmdir /s /q dist) && mkdir dist && babel ./src/containers -d dist --copy-files"
+    "publish:npm": "(if exist dist rmdir /s /q dist) && mkdir dist && babel ./src/containers -d dist --copy-files",
+    "publish": "npm publish"
   },
   "dependencies": {
     "@ladifire-opensource/stylex": "^0.1.0-beta.0",

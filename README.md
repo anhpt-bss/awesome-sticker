@@ -37,12 +37,21 @@ pnpm add awesome-sticker
 
 ```jsx
 import React from 'react';
-import { AwesomeSticker } from 'awesome-sticker';
+import { AwesomeSticker, AwsSticker } from 'awesome-sticker';
 
 const App = () => (
-  <>
-    <AwesomeSticker />
-  </>
+  const [stickerId, setstickerId] = React.useState();
+
+  const onSelectSticker = (stickerId) => {
+    setstickerId(stickerId);
+  };
+
+  return (
+    <>
+      <AwesomeSticker onSelect={onSelectSticker} />
+      <AwsSticker stickerId={stickerId} />
+    </>
+  );
 );
 ```
 
