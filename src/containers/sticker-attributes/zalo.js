@@ -26,7 +26,7 @@ import {
   zalo_quby_25,
   zalo_quby_26,
   zalo_quby_27,
-} from "containers/assets";
+} from "../assets";
 
 export const zaloQuby = [
   {

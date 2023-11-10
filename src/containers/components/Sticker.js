@@ -8,8 +8,8 @@
 import * as React from "react";
 
 import stylex from "@ladifire-opensource/stylex";
-import { CometAspectRatioContainer } from "containers/components/CometAspectRatioContainer";
-import { CometAnimatedSticker } from "containers/components/CometAnimatedSticker";
+import { CometAspectRatioContainer } from "./CometAspectRatioContainer";
+import { CometAnimatedSticker } from "./CometAnimatedSticker";
 
 const styles = stylex.create({
   root: {
