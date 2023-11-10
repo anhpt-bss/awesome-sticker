@@ -5,21 +5,22 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react';
+import * as React from "react";
 
-import stylex from '@ladifire-opensource/stylex';
-import {CometAspectRatioContainer} from "containers/components/CometAspectRatioContainer";
-import {CometAnimatedSticker} from "containers/components/CometAnimatedSticker";
+import stylex from "@ladifire-opensource/stylex";
+import { CometAspectRatioContainer } from "containers/components/CometAspectRatioContainer";
+import { CometAnimatedSticker } from "containers/components/CometAnimatedSticker";
 
 const styles = stylex.create({
-    root: {
-        width: 80,
-        height: 80,
-    },
-    sticker: {
-        width: '100%',
-        height: '100%',
-    },
+  root: {
+    width: 80,
+    height: 80,
+    cursor: "pointer",
+  },
+  sticker: {
+    width: "100%",
+    height: "100%",
+  },
 });
 
 // interface Props {
@@ -31,34 +32,29 @@ const styles = stylex.create({
 // }
 
 export const Sticker = (props) => {
-    const {
-        frameCount,
-        frameRate,
-        framesPerCol,
-        framesPerRow,
-        spriteImg,
-    } = props;
+  const { frameCount, frameRate, framesPerCol, framesPerRow, spriteImg, onSelect } =
+    props;
 
-    return (
-        <div className={stylex(styles.root)}>
-            <CometAspectRatioContainer aspectRatio={1}>
-                <CometAnimatedSticker
-                    animationTriggers={{
-                        hover: true,
-                        load: false,
-                    }}
-                    cursorEnabled={true}
-                    frameCount={frameCount}
-                    frameRate={frameRate}
-                    framesPerCol={framesPerCol}
-                    framesPerRow={framesPerRow}
-                    overlayEnabled={true}
-                    showFocusOverlay={true}
-                    showHoverOverlay={true}
-                    uri={spriteImg}
-                    xstyle={styles.sticker}
-                />
-            </CometAspectRatioContainer>
-        </div>
-    );
+  return (
+    <div className={stylex(styles.root)} onClick={onSelect}>
+      <CometAspectRatioContainer aspectRatio={1}>
+        <CometAnimatedSticker
+          animationTriggers={{
+            hover: true,
+            load: false,
+          }}
+          cursorEnabled={true}
+          frameCount={frameCount}
+          frameRate={frameRate}
+          framesPerCol={framesPerCol}
+          framesPerRow={framesPerRow}
+          overlayEnabled={true}
+          showFocusOverlay={true}
+          showHoverOverlay={true}
+          uri={spriteImg}
+          xstyle={styles.sticker}
+        />
+      </CometAspectRatioContainer>
+    </div>
+  );
 };

@@ -6,52 +6,42 @@
  */
 
 import * as React from "react";
-
 import stylex from "@ladifire-opensource/stylex";
 
-import { CometCard } from "./components-shared-version/Card";
-import { Text } from "./components-shared-version/Text";
 import { Sticker } from "./components/Sticker";
-
 import { zaloSticker } from "./sticker-attributes/zalo";
+import OutsideAlerter from "./components/OutsideAlerter";
+import { StickerIcon } from "./assets";
 
-// interface StickerType {
-//     id: string;
-//     frameCount: number;
-//     frameRate: number;
-//     framesPerCol: number;
-//     framesPerRow: number;
-//     spriteImg: string;
-// }
+const stickers = [...zaloSticker];
 
-const AwesomeSticker = () => {
-  const stickers = [
-    ...zaloSticker,
-  ];
-
-  const groupArray = (array, total) => {
-    return array.reduce(function (
-      accumulator,
-      _currentValue,
-      currentIndex,
-      array
-    ) {
-      if (currentIndex % total === 0)
-        accumulator.push(array.slice(currentIndex, currentIndex + total));
-      return accumulator;
-    },
-    []);
-  };
+const AwesomeSticker = ({ onSelect }) => {
+  const [togglePopover, settogglePopover] = React.useState(false);
 
   return (
     <div className={stylex(styles.root)}>
-      <CometCard dropShadow={1} background="white" xstyle={styles.card}>
-        <Text>Quby</Text>
-        <div>
-          {groupArray(stickers, 4)?.map((groupSticker, groupIndex) => {
-            return (
-              <div key={`group__${groupIndex}`} className={stylex(styles.list)}>
-                {groupSticker?.map((item, index) => {
+      <div
+        className={`awesomeSticker__popoverContainer ${
+          togglePopover ? "open" : "close"
+        }`}
+        style={{ width: 32, height: 32 }}
+      >
+        <div
+          className="awesomeSticker__popoverContainer__button"
+          style={{ width: 32, height: 32 }}
+          onClick={() => settogglePopover(!togglePopover)}
+        >
+          <StickerIcon className='awesomeSticker__popoverContainer__button__icon' style={{ width: 32, height: 32 }} />
+        </div>
+        <OutsideAlerter onClickOutside={() => settogglePopover(false)}>
+          <div
+            className="awesomeSticker__popoverContainer__popover"
+            style={{ position: "absolute", right: 0, bottom: 42, width: 350 }}
+          >
+            <div className={stylex(styles.stickerCard)}>
+              <div className={stylex(styles.title)}>Quby</div>
+              <div className={stylex(styles.stickerList)}>
+                {stickers?.map((item, index) => {
                   return (
                     <Sticker
                       key={`sticker__${index}`}
@@ -60,14 +50,17 @@ const AwesomeSticker = () => {
                       framesPerCol={item?.framesPerCol}
                       framesPerRow={item?.framesPerRow}
                       spriteImg={item?.spriteImg}
+                      onSelect={() => {
+                        onSelect && onSelect(item?.id)
+                      }}
                     />
                   );
                 })}
               </div>
-            );
-          })}
-        </div>
-      </CometCard>
+            </div>
+          </div>
+        </OutsideAlerter>
+      </div>
     </div>
   );
 };
@@ -76,22 +69,27 @@ export default AwesomeSticker;
 
 const styles = stylex.create({
   root: {
+   position: 'fixed',
+   bottom: 20,
+   right: 20,
+  },
+  stickerCard: {
+    display: "block",
+    maxHeight: 400,
+    overflowY: "auto",
+    "-ms-overflow-style": "none",
+    scrollbarWidth: "none",
+    "::-webkit-scrollbar": {
+      display: "none",
+    },
+  },
+  title: {
+    fontSize: "16px",
+    fontWeight: 500,
+  },
+  stickerList: {
     display: "flex",
-    flexDirection: "column",
-    maxWidth: 850,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: "auto",
-    marginRight: "auto",
-  },
-  card: {
-    padding: 16,
-  },
-  sticker: {
-    width: "100%",
-    height: "100%",
-  },
-  list: {
-    display: "flex",
+    flexWrap: "wrap",
+    gap: 8,
   },
 });

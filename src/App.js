@@ -7,13 +7,22 @@
 
 import * as React from "react";
 
-import { AwesomeSticker } from "./containers";
+import { AwesomeSticker, AwsSticker } from "./containers";
 
 import "./index.css";
 
 const App = () => {
+  const [stickerId, setstickerId] = React.useState();
+
+  const onSelectSticker = (stickerId) => {
+    setstickerId(stickerId);
+  };
+
   return (
-    <AwesomeSticker />
+    <>
+      <AwesomeSticker onSelect={onSelectSticker} />
+      <AwsSticker stickerId={stickerId} />
+    </>
   );
 };
 
