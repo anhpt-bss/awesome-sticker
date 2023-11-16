@@ -31,6 +31,20 @@ import zalo_quby_25 from "./images/zalo/quby-25.png";
 import zalo_quby_26 from "./images/zalo/quby-26.png";
 import zalo_quby_27 from "./images/zalo/quby-27.png";
 
+// Ami
+import zalo_ami_1 from "./images/zalo/ami-1.png";
+import zalo_ami_2 from "./images/zalo/ami-2.png";
+import zalo_ami_3 from "./images/zalo/ami-3.png";
+import zalo_ami_4 from "./images/zalo/ami-4.png";
+import zalo_ami_5 from "./images/zalo/ami-5.png";
+import zalo_ami_6 from "./images/zalo/ami-6.png";
+import zalo_ami_7 from "./images/zalo/ami-7.png";
+import zalo_ami_8 from "./images/zalo/ami-8.png";
+import zalo_ami_9 from "./images/zalo/ami-9.png";
+import zalo_ami_10 from "./images/zalo/ami-10.png";
+import zalo_ami_11 from "./images/zalo/ami-11.png";
+import zalo_ami_12 from "./images/zalo/ami-12.png";
+
 export {
   sticker,
   StickerIcon,
@@ -61,4 +75,16 @@ export {
   zalo_quby_25,
   zalo_quby_26,
   zalo_quby_27,
+  zalo_ami_1,
+  zalo_ami_2,
+  zalo_ami_3,
+  zalo_ami_4,
+  zalo_ami_5,
+  zalo_ami_6,
+  zalo_ami_7,
+  zalo_ami_8,
+  zalo_ami_9,
+  zalo_ami_10,
+  zalo_ami_11,
+  zalo_ami_12,
 };

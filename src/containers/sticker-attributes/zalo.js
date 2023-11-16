@@ -1,4 +1,5 @@
 import {
+  // Quby
   zalo_quby_1,
   zalo_quby_2,
   zalo_quby_3,
@@ -26,6 +27,19 @@ import {
   zalo_quby_25,
   zalo_quby_26,
   zalo_quby_27,
+  // Ami
+  zalo_ami_1,
+  zalo_ami_2,
+  zalo_ami_3,
+  zalo_ami_4,
+  zalo_ami_5,
+  zalo_ami_6,
+  zalo_ami_7,
+  zalo_ami_8,
+  zalo_ami_9,
+  zalo_ami_10,
+  zalo_ami_11,
+  zalo_ami_12,
 } from "../assets";
 
 export const zaloQuby = [
@@ -247,4 +261,103 @@ export const zaloQuby = [
   },
 ];
 
-export const zaloSticker = [...zaloQuby];
+export const zaloAmi = [
+  {
+    id: "aws-ami-6f7d0a7a-6e69-40b1-85e3-59a972ce0f6a",
+    frameCount: 18,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 18,
+    spriteImg: zalo_ami_1,
+  },
+  {
+    id: "aws-ami-ee40c3f3-952d-48c5-b431-9a7c3eaa2f41",
+    frameCount: 15,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 15,
+    spriteImg: zalo_ami_2,
+  },
+  {
+    id: "aws-ami-eac2c726-c9a1-4cf4-a165-01e2173b42c4",
+    frameCount: 21,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 21,
+    spriteImg: zalo_ami_3,
+  },
+  {
+    id: "aws-ami-c38c035d-98cf-45d5-90a1-76b20b19188e",
+    frameCount: 5,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 5,
+    spriteImg: zalo_ami_4,
+  },
+  {
+    id: "aws-ami-aaf383b1-e57d-4535-8c63-37c5ef3e3663",
+    frameCount: 10,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 10,
+    spriteImg: zalo_ami_5,
+  },
+  {
+    id: "aws-ami-928f81b7-31ea-492a-b07b-e902361d4b14",
+    frameCount: 12,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 12,
+    spriteImg: zalo_ami_6,
+  },
+  {
+    id: "aws-ami-efb7f164-012e-48a8-a3e8-2a2a6f011a09",
+    frameCount: 10,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 10,
+    spriteImg: zalo_ami_7,
+  },
+  {
+    id: "aws-ami-1d451de7-b446-40da-aab7-d106b5b97f0b",
+    frameCount: 20,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 20,
+    spriteImg: zalo_ami_8,
+  },
+  {
+    id: "aws-ami-f2d192c2-89b8-46ea-a9b7-183292b02f1f",
+    frameCount: 22,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 22,
+    spriteImg: zalo_ami_9,
+  },
+  {
+    id: "aws-ami-36703d6d-693e-4f47-a39e-5b070f11fc85",
+    frameCount: 10,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 10,
+    spriteImg: zalo_ami_10,
+  },
+  {
+    id: "aws-ami-499d4985-03b5-45a1-8642-0c6e639dd666",
+    frameCount: 10,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 10,
+    spriteImg: zalo_ami_11,
+  },
+  {
+    id: "aws-ami-5a1f3c24-5839-42e1-9bb1-c3963143b8bf",
+    frameCount: 7,
+    frameRate: 90,
+    framesPerCol: 1,
+    framesPerRow: 7,
+    spriteImg: zalo_ami_12,
+  },
+];
+
+export const zaloSticker = [...zaloQuby, ...zaloAmi];

@@ -9,19 +9,27 @@ import * as React from "react";
 import stylex from "@ladifire-opensource/stylex";
 
 import { Sticker } from "./components/Sticker";
-import { zaloSticker } from "./sticker-attributes/zalo";
+import { zaloQuby, zaloAmi } from "./sticker-attributes/zalo";
 import OutsideAlerter from "./components/OutsideAlerter";
 import { StickerIcon } from "./assets";
 
-const stickers = [...zaloSticker];
+const stickers = [
+  {
+    name: "Quby",
+    stickers: zaloQuby,
+  },
+  {
+    name: "Ami Bụng Bự",
+    stickers: zaloAmi,
+  },
+];
 
 const AwesomeSticker = ({ onSelect }) => {
   const [togglePopover, settogglePopover] = React.useState(false);
 
   return (
-    // <div className={stylex(styles.root)}>
     <div
-      className={`awesomeSticker__popoverContainer ${
+      className={`${stylex(styles.root)} awesomeSticker__popoverContainer ${
         togglePopover ? "open" : "close"
       }`}
       style={{ width: 32, height: 32 }}
@@ -42,29 +50,36 @@ const AwesomeSticker = ({ onSelect }) => {
           style={{ position: "absolute", right: 0, bottom: 42, width: 400 }}
         >
           <div className={stylex(styles.stickerCard)}>
-            <div className={stylex(styles.title)}>Quby</div>
-            <div className={stylex(styles.stickerList)}>
-              {stickers?.map((item, index) => {
-                return (
-                  <Sticker
-                    key={`sticker__${index}`}
-                    frameCount={item?.frameCount}
-                    frameRate={item?.frameRate}
-                    framesPerCol={item?.framesPerCol}
-                    framesPerRow={item?.framesPerRow}
-                    spriteImg={item?.spriteImg}
-                    onSelect={() => {
-                      onSelect && onSelect(item?.id);
-                    }}
-                  />
-                );
-              })}
-            </div>
+            {stickers?.map((groupSticker, groupIndex) => {
+              return (
+                <div key={groupIndex}>
+                  <div className={stylex(styles.title)}>
+                    {groupSticker?.name}
+                  </div>
+                  <div className={stylex(styles.stickerList)}>
+                    {groupSticker?.stickers?.map((item, index) => {
+                      return (
+                        <Sticker
+                          key={`sticker__${index}`}
+                          frameCount={item?.frameCount}
+                          frameRate={item?.frameRate}
+                          framesPerCol={item?.framesPerCol}
+                          framesPerRow={item?.framesPerRow}
+                          spriteImg={item?.spriteImg}
+                          onSelect={() => {
+                            onSelect && onSelect(item?.id);
+                          }}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </OutsideAlerter>
     </div>
-    // </div>
   );
 };
 
@@ -72,9 +87,10 @@ export default AwesomeSticker;
 
 const styles = stylex.create({
   root: {
-     position: 'fixed',
-     bottom: 20,
-     right: 20,
+    display: "block",
+    position: "fixed !important",
+    bottom: 20,
+    right: 20,
   },
   stickerCard: {
     display: "block",
